@@ -31,11 +31,11 @@
         </div><!-- /.navbar-collapse -->
       </div>
     </nav>
-
-        
-    
-    
-    
+    <div class="container">
+      <% flash.each do |category, msg| %>
+        <%= content_tag :div, msg, class: "alert alert-#{category}" %>
+      <% end %>
+    </div>
     <%= yield %>
     
   </body>
